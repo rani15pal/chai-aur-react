@@ -1,10 +1,17 @@
 import React from 'react'
 
 const App = () => {
+
+  const submitHandler = (e) => {
+   e.preventDefault();
+   console.log("form sumbitted")
+  }
+
+
   return (
 
     <div>
-      <form>
+      <form onSubmit = {(e) => submitHandler(e)} >
        <input type="text"  placeholder='enter your name'/>
        <button> submit </button>
       </form>
